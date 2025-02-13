@@ -11,6 +11,19 @@ function App() {
     <>
       <Navbar /> {/* This is the Navbar component */}
       <div>
+        <nav>
+          <ul>
+            <li>
+              <a href="">coap</a>
+            </li>
+            <li>
+              ciao
+            </li>
+            <li>
+              ciao
+            </li>
+          </ul>
+        </nav>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
