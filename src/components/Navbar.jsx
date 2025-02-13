@@ -5,7 +5,7 @@ function Navbar() {
 
   return (
     <>
-      <div className={`h-40 w-40  ${x > 10 ? ' bg-sky-500 rotate' : ' rotate-45 bg-red-500'}`}></div>
+      <div className={`h-40 w-40 ${x > 10 ? ' bg-sky-500 rotate' : ' rotate-45 bg-red-500'}`}></div>
       <nav>
         <ul style={{ backgroundColor: 'red' }} className='nav-links'>
           <li>
