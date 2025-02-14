@@ -4,6 +4,17 @@ import Card from './components/Card'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  const userData = useState({name: "John", age: 25})
+  const [user, setUser] = userData
+  console.log(userData)
+
+  const changeUserName = () => {
+    const updateUserName= {...user, name: "Doe"}
+    setUser(updateUserName)
+    console.log(userData)
+  }
+
   const cities =[ 
         {
           id:0,
@@ -52,6 +63,9 @@ function App() {
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
+        </button>
+        <button onClick={changeUserName}>
+          proca
         </button>
       </div>
       
