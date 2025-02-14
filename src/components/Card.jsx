@@ -1,4 +1,5 @@
-function Card({ title, imgUrl, children }) {
+function Card({ title, imgUrl, isVisited, children }) {
+  const visitedText = isVisited ? '✨ Visited' : '❌ Not Visited';
   return (
     <>
         <div className='max-w-sm rounded-xl overflow-hidden shadow-lg bg-zinc-950 '>
@@ -9,6 +10,7 @@ function Card({ title, imgUrl, children }) {
                     {children}
                 </p>
             </div>
+            <span>{visitedText}</span>
         </div>
     </>
   );
