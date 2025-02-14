@@ -41,14 +41,14 @@ function App() {
 
       <div className='grid grid-cols-4 gap-10'>
 
-        {cities.map((city) => (
+      {cities.map((city) => (
           <Card key={city.id} title={city.title} imgUrl={city.imgUrl} isVisited={city.isVisited}>
             {city.text}
           </Card>
         ))}
 
       </div>
-      
+
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
