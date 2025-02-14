@@ -1,5 +1,4 @@
 import './Navbar.css'
-import Link from './Link'
 function Navbar() {
   const x = 11; // Example value for x, you can replace it with your actual variable
 
@@ -9,10 +8,10 @@ function Navbar() {
       <nav>
         <ul style={{ backgroundColor: 'red' }} className='nav-links'>
           <li>
-            <Link to='/'>Home</Link>
+            <a to='/'>Home</a>
           </li>
           <li>
-            <Link>linkette</Link>
+            <a>linkette</a>
           </li>
         </ul>
       </nav>
