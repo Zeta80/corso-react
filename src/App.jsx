@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Card from './components/Card'
+import CardForm from './components/CardForm'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,7 +16,7 @@ function App() {
     console.log(userData)
   }
 
-  const cities =[ 
+const initialCities =[ 
         {
           id:0,
           isVisited:true,
@@ -47,6 +48,11 @@ function App() {
        
 ]
 
+const [cities, setCities] = useState(initialCities)
+
+const addCitty = (city) => {
+  setCities([...cities, city])}
+
   return (
     <>
 
@@ -58,6 +64,8 @@ function App() {
           </Card>
         ))}
 
+     
+
       </div>
 
       <div className="card">
@@ -67,6 +75,7 @@ function App() {
         <button onClick={changeUserName}>
           proca
         </button>
+        <CardForm addCity={addCitty} /> 
       </div>
       
     </>
