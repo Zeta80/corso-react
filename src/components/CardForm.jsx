@@ -35,19 +35,19 @@ function CardForm({addCity}) {
             <div className="flex flex-col p-4 bg-gray-950">
                 <div >
                     <label >Città</label>
-                    <input type="text" id="Città" name="title" value={formData.title} onChange={handleType}/>
+                    <input className='bg-amber-100' type="text" id="Città" name="title" value={formData.title} onChange={handleType}/>
                 </div>
                 <div>
                     <label >Descrizione</label>
-                    <input type="text" id="text" name="text" value={formData.text} onChange={handleType}/>
+                    <input className='bg-amber-100' type="text" id="text" name="text" value={formData.text} onChange={handleType}/>
                 </div>
                 <div>
-                    <label >Città</label>
-                    <input type="text" id="imgUrl" name="imgUrl" value={formData.imgUrl} onChange={handleType}/>
+                    <label >immagine url</label>
+                    <input className='bg-amber-100' type="text" id="imgUrl" name="imgUrl" value={formData.imgUrl} onChange={handleType}/>
                 </div>
                 <div>
                     <label >visitata?</label>
-                    <input type="checkbox" id="isVisited" name="isVisited" value={formData.isVisited} onChange={handleType}/>
+                    <input className='bg-amber-100' type="checkbox" id="isVisited" name="isVisited" value={formData.isVisited} onChange={handleType}/>
                 </div>
             </div>
             <button onClick={handleForm}>add card</button>

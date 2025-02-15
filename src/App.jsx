@@ -2,19 +2,11 @@ import { useState } from 'react'
 import './App.css'
 import Card from './components/Card'
 import CardForm from './components/CardForm'
+import ExampleUseEffect from './components/ExampleUseEffect'
 
 function App() {
   const [count, setCount] = useState(0)
 
-  const userData = useState({name: "John", age: 25})
-  const [user, setUser] = userData
-  console.log(userData)
-
-  const changeUserName = () => {
-    const updateUserName= {...user, name: "Doe"}
-    setUser(updateUserName)
-    console.log(userData)
-  }
 
 const initialCities =[ 
         {
@@ -54,8 +46,8 @@ const addCitty = (city) => {
   setCities([...cities, city])}
 
   return (
-    <>
-
+    <> 
+    <ExampleUseEffect cities={cities} />
       <div className='grid grid-cols-4 gap-10'>
 
       {cities.map((city) => (
@@ -71,9 +63,6 @@ const addCitty = (city) => {
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
-        </button>
-        <button onClick={changeUserName}>
-          proca
         </button>
         <CardForm addCity={addCitty} /> 
       </div>
