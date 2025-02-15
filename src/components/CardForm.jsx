@@ -6,7 +6,7 @@ function CardForm({addCity}) {
          
     const [formData, setFormData] = useState(
         {
-            name: "",
+            title: "",
             text: "",
             imgUrl: "",
             isVisited: false
@@ -14,7 +14,14 @@ function CardForm({addCity}) {
     )
     const handleForm = (e) => {
         e.preventDefault()
-        addCity(formData)
+        const city = {
+            title: formData.title,
+            text: formData.text,
+            imgUrl: formData.imgUrl,
+            isVisited: formData.isVisited
+        }
+        console.log(city)
+        addCity(city)
     }
     const handleType = (e) => {
         const {name, value, type, checked} = e.target
@@ -29,19 +36,19 @@ function CardForm({addCity}) {
         <form action="handleForm">
             <div className="flex flex-col p-4 bg-gray-950">
                 <div >
-                    <label htmlFor="name">Città</label>
-                    <input type="text" id="Città" name="name" value={formData.name} onChange={handleType}/>
+                    <label >Città</label>
+                    <input type="text" id="Città" name="title" value={formData.title} onChange={handleType}/>
                 </div>
                 <div>
-                    <label htmlFor="text">Descrizione</label>
+                    <label >Descrizione</label>
                     <input type="text" id="text" name="text" value={formData.text} onChange={handleType}/>
                 </div>
                 <div>
-                    <label htmlFor="ImgUrl">Città</label>
+                    <label >Città</label>
                     <input type="text" id="imgUrl" name="imgUrl" value={formData.imgUrl} onChange={handleType}/>
                 </div>
                 <div>
-                    <label htmlFor="isVisited">visitata?</label>
+                    <label >visitata?</label>
                     <input type="checkbox" id="isVisited" name="isVisited" value={formData.isVisited} onChange={handleType}/>
                 </div>
             </div>
